@@ -9,7 +9,7 @@
 
 ## Pracownia nr 2
 
-* program przeprowadzający rezulucyjny dowód sprzecznośći
+* program przeprowadzający rezolucyjny dowód sprzecznośći
 
 * główne predykaty:
 
