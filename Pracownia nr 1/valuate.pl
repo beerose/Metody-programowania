@@ -1,4 +1,4 @@
-:- module(aleksandra_sikora, [solve/2]).
+
 
 
 :- op(200, fx, ~).

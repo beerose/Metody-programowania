@@ -1,0 +1,49 @@
+% Definiujemy moduł zawierający testy.
+% Należy zmienić nazwę modułu na {imie}_{nazwisko}_tests gdzie za
+% {imie} i {nazwisko} należy podstawić odpowiednio swoje imię
+% i nazwisko bez wielkich liter oraz znaków diakrytycznych
+:- module(aleksandra_sikora_tests, [resolve_tests/5, prove_tests/4]).
+
+% definiujemy operatory ~/1 oraz v/2
+:- op(200, fx, ~).
+:- op(500, xfy, v).
+
+% Zbiór faktów definiujących testy dla predykatu resolve
+% Należy zdefiniować swoje testy
+resolve_tests(simple_test, q, p v q, ~q v r, p v r).
+
+
+resolve_tests(zPowtorzeniami, q, p v q v q, ~q v r v r v r, p v r).
+resolve_tests(sprzecznosc, q, q, ~q , []).
+resolve_tests(pojedynczaRezolwenta, q, p v q, ~q v p, p).
+
+resolve_tests(dlugaRezolwenta1, v_1, v_1 v v_2 v v_3 v v_4 v v_5 v v_6 v v_7 v v_8 v v_9 v v_10 v v_11 v v_12 v v_13 v v_14 v v_15 v v_16 v v_17 v v_18 v v_19 v v_20 v v_21 v v_22 v v_23 v v_24 v v_25 v v_26 v v_27 v v_28 v v_29 v v_30 v v_31 v v_32 v v_33 v v_34 v v_35 v v_36 v v_37 v v_38 v v_39 v v_40 v v_41 v v_42 v v_43 v v_44 v v_45 v v_46 v v_47 v v_48 v v_49 v v_50 v v_51 v v_52 v v_53 v v_54 v v_55 v v_56 v v_57 v v_58 v v_59 v v_60 v v_61 v v_62 v v_63 v v_64 v v_65 v v_66 v v_67 v v_68 v v_69 v v_70 v v_71 v v_72 v v_73 v v_74 v v_75 v v_76 v v_77 v v_78 v v_79 v v_80 v v_81 v v_82 v v_83 v v_84 v v_85 v v_86 v v_87 v v_88 v v_89 v v_90 v v_91 v v_92 v v_93 v v_94 v v_95 v v_96 v v_97 v v_98 v v_99 v v_100, ~ v_1, v_2 v v_3 v v_4 v v_5 v v_6 v v_7 v v_8 v v_9 v v_10 v v_11 v v_12 v v_13 v v_14 v v_15 v v_16 v v_17 v v_18 v v_19 v v_20 v v_21 v v_22 v v_23 v v_24 v v_25 v v_26 v v_27 v v_28 v v_29 v v_30 v v_31 v v_32 v v_33 v v_34 v v_35 v v_36 v v_37 v v_38 v v_39 v v_40 v v_41 v v_42 v v_43 v v_44 v v_45 v v_46 v v_47 v v_48 v v_49 v v_50 v v_51 v v_52 v v_53 v v_54 v v_55 v v_56 v v_57 v v_58 v v_59 v v_60 v v_61 v v_62 v v_63 v v_64 v v_65 v v_66 v v_67 v v_68 v v_69 v v_70 v v_71 v v_72 v v_73 v v_74 v v_75 v v_76 v v_77 v v_78 v v_79 v v_80 v v_81 v v_82 v v_83 v v_84 v v_85 v v_86 v v_87 v v_88 v v_89 v v_90 v v_91 v v_92 v v_93 v v_94 v v_95 v v_96 v v_97 v v_98 v v_99 v v_100).
+resolve_tests(krotkaRezolwentaDlugaLista, v_0,  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0, ~v_0 v v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0 v  v_0, v_0).
+resolve_tests(powtorzonyTenSamAtom, p, p v p v p v p v p v p, ~p v ~p v ~p v ~p v ~p v ~p, []).
+
+resolve_tests(basicTest1_r, p, p, [], []).
+resolve_tests(basicTest2_r, p, p, ~p v p v p v p, p ).
+resolve_tests(basicTest3_r, p, p v ~p, ~p, ~p).
+
+% Zbiór faktów definiujących testy dla predykatu prove
+% Należy zdefiniować swoje testy
+prove_tests(example, validity, [p v q v ~r, ~p v q, r v q, ~q, p], unsat).
+prove_tests(excluded_middle, validity, [p v ~p], sat).
+
+
+prove_tests(basicTest1, validity, [], unsat).
+prove_tests(basicTest1, validity, [[]], unsat).
+prove_tests(basicTest2, validity, [p], sat).
+prove_tests(basicTest3, validity, [p,~p], unsat).
+prove_tests(basicTest4, validity, [p,[],q], unsat).
+
+prove_tests(dluga_lista, validity, [v_1,  ~v_1,  v_2,  ~v_2,  v_3,  ~v_3,  v_4,  ~v_4,  v_5,  ~v_5,  v_6,  ~v_6,  v_7,  ~v_7,  v_8,  ~v_8,  v_9,  ~v_9,  v_10,  ~v_10,  v_11,  ~v_11,  v_12,  ~v_12,  v_13,  ~v_13,  v_14,  ~v_14,  v_15,  ~v_15,  v_16,  ~v_16,  v_17,  ~v_17,  v_18,  ~v_18,  v_19,  ~v_19,  v_20,  ~v_20,  v_21,  ~v_21,  v_22,  ~v_22,  v_23,  ~v_23,  v_24,  ~v_24,  v_25,  ~v_25,  v_26,  ~v_26,  v_27,  ~v_27,  v_28,  ~v_28,  v_29,  ~v_29,  v_30,  ~v_30,  v_31,  ~v_31,  v_32,  ~v_32,  v_33,  ~v_33,  v_34,  ~v_34,  v_35,  ~v_35,  v_36,  ~v_36,  v_37,  ~v_37,  v_38,  ~v_38,  v_39,  ~v_39,  v_40,  ~v_40,  v_41,  ~v_41,  v_42,  ~v_42,  v_43,  ~v_43,  v_44,  ~v_44,  v_45,  ~v_45,  v_46,  ~v_46,  v_47,  ~v_47,  v_48,  ~v_48,  v_49,  ~v_49,  v_50,  ~v_50,  v_51,  ~v_51,  v_52,  ~v_52,  v_53,  ~v_53,  v_54,  ~v_54,  v_55,  ~v_55,  v_56,  ~v_56,  v_57,  ~v_57,  v_58,  ~v_58,  v_59,  ~v_59,  v_60,  ~v_60,  v_61,  ~v_61,  v_62,  ~v_62,  v_63,  ~v_63,  v_64,  ~v_64,  v_65,  ~v_65,  v_66,  ~v_66,  v_67,  ~v_67,  v_68,  ~v_68,  v_69,  ~v_69,  v_70,  ~v_70,  v_71,  ~v_71,  v_72,  ~v_72,  v_73,  ~v_73,  v_74,  ~v_74,  v_75,  ~v_75,  v_76,  ~v_76,  v_77,  ~v_77,  v_78,  ~v_78,  v_79,  ~v_79,  v_80,  ~v_80,  v_81,  ~v_81,  v_82,  ~v_82,  v_83,  ~v_83,  v_84,  ~v_84,  v_85,  ~v_85,  v_86,  ~v_86,  v_87,  ~v_87,  v_88,  ~v_88,  v_89,  ~v_89,  v_90,  ~v_90,  v_91,  ~v_91,  v_92,  ~v_92,  v_93,  ~v_93,  v_94,  ~v_94,  v_95,  ~v_95,  v_96,  ~v_96,  v_97,  ~v_97,  v_98,  ~v_98,  v_99,  ~v_99,  v_100,  ~v_100], unsat).
+prove_tests(petla, validity, [c v p v ~p, ~c], sat).
+
+
+prove_tests(prostePowtorzenia, validity, [p v p, ~p v ~p], unsat).
+prove_tests(duzoPowtorzen, validity, [p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p v p, ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p v ~p], unsat).
+
+
+prove_tests(dlugaLista_p1, performance, [v_1,  ~v_1,  v_2,  ~v_2,  v_3,  ~v_3,  v_4,  ~v_4,  v_5,  ~v_5,  v_6,  ~v_6,  v_7,  ~v_7,  v_8,  ~v_8,  v_9,  ~v_9,  v_10,  ~v_10,  v_11,  ~v_11,  v_12,  ~v_12,  v_13,  ~v_13,  v_14,  ~v_14,  v_15,  ~v_15,  v_16,  ~v_16,  v_17,  ~v_17,  v_18,  ~v_18,  v_19,  ~v_19,  v_20,  ~v_20,  v_21,  ~v_21,  v_22,  ~v_22,  v_23,  ~v_23,  v_24,  ~v_24,  v_25,  ~v_25,  v_26,  ~v_26,  v_27,  ~v_27,  v_28,  ~v_28,  v_29,  ~v_29,  v_30,  ~v_30,  v_31,  ~v_31,  v_32,  ~v_32,  v_33,  ~v_33,  v_34,  ~v_34,  v_35,  ~v_35,  v_36,  ~v_36,  v_37,  ~v_37,  v_38,  ~v_38,  v_39,  ~v_39,  v_40,  ~v_40,  v_41,  ~v_41,  v_42,  ~v_42,  v_43,  ~v_43,  v_44,  ~v_44,  v_45,  ~v_45,  v_46,  ~v_46,  v_47,  ~v_47,  v_48,  ~v_48,  v_49,  ~v_49,  v_50,  ~v_50,  v_51,  ~v_51,  v_52,  ~v_52,  v_53,  ~v_53,  v_54,  ~v_54,  v_55,  ~v_55,  v_56,  ~v_56,  v_57,  ~v_57,  v_58,  ~v_58,  v_59,  ~v_59,  v_60,  ~v_60,  v_61,  ~v_61,  v_62,  ~v_62,  v_63,  ~v_63,  v_64,  ~v_64,  v_65,  ~v_65,  v_66,  ~v_66,  v_67,  ~v_67,  v_68,  ~v_68,  v_69,  ~v_69,  v_70,  ~v_70,  v_71,  ~v_71,  v_72,  ~v_72,  v_73,  ~v_73,  v_74,  ~v_74,  v_75,  ~v_75,  v_76,  ~v_76,  v_77,  ~v_77,  v_78,  ~v_78,  v_79,  ~v_79,  v_80,  ~v_80,  v_81,  ~v_81,  v_82,  ~v_82,  v_83,  ~v_83,  v_84,  ~v_84,  v_85,  ~v_85,  v_86,  ~v_86,  v_87,  ~v_87,  v_88,  ~v_88,  v_89,  ~v_89,  v_90,  ~v_90,  v_91,  ~v_91,  v_92,  ~v_92,  v_93,  ~v_93,  v_94,  ~v_94,  v_95,  ~v_95,  v_96,  ~v_96,  v_97,  ~v_97,  v_98,  ~v_98,  v_99,  ~v_99,  v_100,  ~v_100], unsat).
+prove_tests(dlugaLista_p2, performance, [ p,q,s,z,f, z v q v q v q v q v f v t v p v q v f v q v p v s v q v q v s v t v f v s v p v p v t v f v t v f v q v s v q v f v q v s v q v f v s v p v f v t v p v p v f v f v f v t v s v t v t v p v q v q v p v p v s v p v t v t v f v p v t v s v q v s v t v s v q v f v f v q v f v s v f v t v q v f v s v p v p v p v q v q v s v f v t v s v f v t v p v q v s v q, t v q v s v t v q v p v f v f v f v f v q v t v p v f v q v s v q v f v t v s v t v t v s v f v s v q v f v f v p v q v t v f v q v f v s v t v f v s v s v p v s v q v q v q, s v t v p v q, q v f, q v f v f v t v s v p v p v q v q v q v f v s v p v q v p v f v s v t v q v t v q v s v t v q v p v q v q v p v s v t v p v q v q v q v f v s v f v p v q v p v s v p v f v s v p v s v f v p v s v s v t v p v q v s v t v t v q v q v s v t v f v t v q v p v s v f v f v q v t v p v s v t v f, t v f v s v t v t v s v f v q v t v q v f v p v q v t v t v p v f v p v f v f v f v t v p v t v p v t v t v p v t v q v f v q v p v q v q v s v q v p v t v s v q v s v f v t v q v q v s v f v t v f v s v s v s v t v f v p v s v t v s v s v s v s v f v p v p v q v f v q v f v f v t v p v s v s v q v s v s v q v f, f v f v q v t v f v q v q v t v t, q v p v p v q v p v p v s v p v q v q v q v p v t v q v s v t v t v q v f v p v s v q v t v t v t v q v s v s v f v p v p v f v s v t v p v t v p v s v s v t v s v s v t v p v t v f v q v s v f v s v f v f v s v t v s v q v q v s v f v t v t v t v p v q v q v p v s v p v s v s v p v t v t v s v f v f v t v f v q v t v q v s v t v q v f v t v f v p v f v f, q v p v t v f v s v q v s v s v f v p v s v p v t v s v s v t v p v q v q v s v t v p v t v f v s v t, p v p v t v p v p v q v q v p v t v s v q v t v p v f v f v q v f v s v p v p v f v q v p v s v p v s v s v s v p v q v f v t v p v q v q v s, t v s v f v t v s v t v p v q v q v p v t v s v p v p v t v p v f v s v s v s v t v s v s v t v q v q v s v s v t v p v p v p v p v p v f v f v q v f v t v t v p v t v s v f v p v f v s v p v t v t v s v p v f v s v f v t v f v s v s v q v q v f v f v f v p v q v q v f v s v q v f v f v t v q v t v p v f v q v f v q v s v s v s v p v p v s v t v f v q v t v t v q v p], sat).
