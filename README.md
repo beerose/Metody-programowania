@@ -27,3 +27,7 @@
 
 
          Solution = [(p, axiom),  (~p v q, axiom),  (q, p, 2, 5),  (q, axiom),  (~q, axiom),  ([], q, 4, 6)] 
+
+## Pracownia nr 3
+* moduł eksportujący predykat parse/3 parsujący programy w jezyku HDML
+* weryfikowanie poprawności układów cyfrowych
