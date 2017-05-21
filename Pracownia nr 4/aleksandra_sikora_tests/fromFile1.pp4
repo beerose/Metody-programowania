@@ -1,0 +1,3 @@
+input x y z in
+if a > b then a * b 
+else a * b * c
