@@ -191,7 +191,7 @@ evalArthimetic p op (Right (VInteger a)) (Right (VInteger b)) = case op of
                   otherwise   -> Right     $ VInteger (b `div` a)
 
 
--- glowna funkcja ktora zwraca wartosc programu lub RuntimeError
+-- glowna funkcja, ktora zwraca wartosc programu lub RuntimeError
 eval :: [(Var,Integer)] -> Expr p -> EvalResult
 eval vars expr = case inferEval env expr of
                         Left error -> RuntimeError
